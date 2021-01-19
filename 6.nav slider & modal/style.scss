@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+$modal-duration: 1s;
+$primary-color: #30336b;
+$secondary-color: #be2edd;
+$menu-width: 200px;
+$border-light: rgba(200, 200, 200, 0.1);
+$toggle-bg: rgba(0, 0, 0, 0.3);
+$modal-bg-color: rgba(0, 0, 0, 0.6);
+$box-shodow-values: 0 0 10px rgba(0, 0, 0, 0.3);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  transition: transform 0.2s ease;
+
+  &.show-menu {
+    transform: translateX($menu-width);
+  }
+}
+
+.btn {
+  cursor: pointer;
+  background-color: $secondary-color;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+nav {
+  background-color: $primary-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $menu-width;
+  height: 100vh;
+  color: #fff;
+  border-right: 2px solid $border-light;
+  transform: translateX(-100%);
+
+  .logo {
+    padding: 2rem 1rem;
+    text-align: center;
+
+    img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+    }
+
+    &.show-menu {
+      transform: translateX(0);
+      z-index: 100;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      border-bottom: 2px solid $border-light;
+      padding: 1.2rem 2rem;
+
+      &:first-of-type {
+        border-top: 2px solid $border-light;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+header {
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 3rem;
+  font-size: 130%;
+  position: relative;
+
+  h1,
+  p {
+    padding: 0.8rem 0;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+  }
+
+  .open {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+.container {
+  padding: 2rem;
+
+  h2 {
+    margin: 1rem 0;
+  }
+  p {
+    margin: 1rem 0;
+  }
+  ul {
+    padding-left: 3rem;
+  }
+}
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $modal-bg-color;
+  display: none;
+  animation: modal $modal-duration ease;
+
+  .modal {
+    background-color: #fff;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: $box-shodow-values;
+    border-radius: 5px;
+
+    h3 {
+      background-color: $primary-color;
+      padding: 1rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+      font-size: 1.5rem;
+    }
+    .form-container {
+      padding: 1.2rem;
+
+      p {
+        margin: 1rem 0;
+      }
+
+      label {
+        display: block;
+        margin: 0.3rem 0;
+      }
+      .form-group {
+        margin: 1rem 0;
+      }
+
+      .form-control {
+        padding: 0.6rem;
+        width: 100%;
+      }
+    }
+  }
+
+  &.show-modal {
+    display: block;
+  }
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+$success: #2ecc71;
+$error: #e74c3c;
+$background: #f9fafb;
+$btn-1: #3498db;
+$label: #777;
+$border-input: #f0f0f0;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $background;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 25rem;
+  padding: 1rem;
+
+  #form {
+    padding: 2rem;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .form-control {
+      margin: 1rem 0;
+
+      label {
+        display: block;
+        color: $label;
+      }
+
+      input {
+        border: 2px $border-input solid;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        display: block;
+        width: 100%;
+
+        &:focus {
+          outline: 0;
+          border-color: #777;
+        }
+      }
+      &.error input {
+        outline: 0;
+        border-color: $error;
+      }
+      &.success input {
+        outline: 0;
+        border-color: $success;
+      }
+      small {
+        visibility: hidden;
+      }
+
+      &.error small {
+        visibility: visible;
+        color: $error;
+      }
+    }
+    button {
+      border: none;
+      background-color: $btn-1;
+      padding: 0.8rem;
+      display: block;
+      width: 100%;
+      color: #fff;
+      border-radius: 0.3rem;
+      margin: 0.5rem 0;
+    }
+  }
+}

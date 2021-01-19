@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>My Hangman Game</title>
+  </head>
+  <body>
+    <h1 class="header">Hangman</h1>
+    <p class="header-p">Find the hidden word - Enter a letter</p>
+    <div class="game-container">
+      <svg height="250" width="200" class="figure-container">
+        <line x1="60" y1="20" x2="140" y2="20"></line>
+        <line x1="140" y1="20" x2="140" y2="50"></line>
+        <line x1="60" y1="20" x2="60" y2="230"></line>
+        <line x1="20" y1="230" x2="100" y2="230"></line>
+
+        <!-- man -->
+        <!-- head -->
+        <circle cx="140" cy="70" r="20" class="figure-part"></circle>
+        <!-- body -->
+        <line class="figure-part" x1="140" y1="90" x2="140" y2="150"></line>
+        <!-- left hand -->
+        <line class="figure-part" x1="140" y1="120" x2="110" y2="100"></line>
+        <!-- right hand -->
+        <line class="figure-part" x1="140" y1="120" x2="170" y2="100"></line>
+        <!-- left foot -->
+        <line class="figure-part" x1="140" y1="150" x2="110" y2="180"></line>
+        <!-- right foot -->
+        <line class="figure-part" x1="140" y1="150" x2="170" y2="180"></line>
+      </svg>
+      <div class="wrong-container">
+        <!-- <p>Worng</p>
+        <span class="worng-letter">f</span> -->
+      </div>
+      <div class="word">
+        <!-- <span class="letter">h</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">l</span>
+        <span class="letter">o</span> -->
+      </div>
+    </div>
+
+    <div class="gameover-container">
+      <div class="gameover">
+        <h2 class="gameover-msg"></h2>
+        <button class="gameover-btn">Play Again</button>
+      </div>
+    </div>
+    <div class="message-container">
+      <p>You have used this letter before</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #296ca8;
+  margin: 0;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.filter-container {
+  width: 80vw;
+  max-width: 800px;
+}
+
+.filter-container .filter {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 3px;
+  border: none;
+  font-size: 1rem;
+}
+
+.posts-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80vw;
+  max-width: 800px;
+  margin: 2rem 2rem 3rem 2rem;
+}
+
+.posts-container .post {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #4992d3;
+  border-radius: 3px;
+  position: relative;
+}
+
+.posts-container .post h2 {
+  margin: 0.5rem;
+}
+
+.posts-container .post p {
+  margin-left: 1rem;
+}
+
+.posts-container .post .number {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #296ca8;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 2rem 0;
+}
+
+.loading .circle {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  margin: 0.3rem;
+  border-radius: 50%;
+  -webkit-animation: bounce 0.3s infinite ease;
+          animation: bounce 0.3s infinite ease;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+.loading .circle:nth-last-of-type(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.loading .circle:nth-last-of-type(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.loading.show .circle {
+  opacity: 1;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}

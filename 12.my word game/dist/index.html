@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <title>Type Speed Game</title>
+  </head>
+  <body>
+    <button class="setting-btn">
+      <i class="fas fa-cog"></i>
+    </button>
+    <div class="setting-container">
+      <form id="difficulty-form">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2 class="game-title">👩‍💻 Speed Typer 👨‍💻</h2>
+      <div class="game-container">
+        <p>Type the following:</p>
+        <h1 id="word"></h1>
+        <input type="text" id="text" placeholder="Enter the word..." autocomplete="off" />
+      </div>
+      <div class="start-container">
+        <input type="text" placeholder="Enter your name" id="name" autocomplete="off" />
+        <button class="start">Start</button>
+      </div>
+      <div class="time-container">
+        <p>Time left: <span id="time"></span>s</p>
+      </div>
+      <div class="score-container">
+        <p>Score: <span id="score">0</span></p>
+      </div>
+      <div class="end-game">
+        <!-- <h2>time out</h2>
+        <p>score</p>
+        <button>reload</button> -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

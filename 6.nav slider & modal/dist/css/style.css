@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+body.show-menu {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #be2edd;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+nav {
+  background-color: #30336b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  color: #fff;
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+nav .logo {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+nav .logo img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+nav .logo.show-menu {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+  padding: 1.2rem 2rem;
+}
+
+nav ul li:first-of-type {
+  border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  background-color: #30336b;
+  color: #fff;
+  text-align: center;
+  padding: 3rem;
+  font-size: 130%;
+  position: relative;
+}
+
+header h1,
+header p {
+  padding: 0.8rem 0;
+}
+
+header .toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+header .open {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.container h2 {
+  margin: 1rem 0;
+}
+
+.container p {
+  margin: 1rem 0;
+}
+
+.container ul {
+  padding-left: 3rem;
+}
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  -webkit-animation: modal 1s ease;
+          animation: modal 1s ease;
+}
+
+.modal-container .modal {
+  background-color: #fff;
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.modal-container .modal h3 {
+  background-color: #30336b;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.modal-container .modal .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+.modal-container .modal .form-container {
+  padding: 1.2rem;
+}
+
+.modal-container .modal .form-container p {
+  margin: 1rem 0;
+}
+
+.modal-container .modal .form-container label {
+  display: block;
+  margin: 0.3rem 0;
+}
+
+.modal-container .modal .form-container .form-group {
+  margin: 1rem 0;
+}
+
+.modal-container .modal .form-container .form-control {
+  padding: 0.6rem;
+  width: 100%;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+@-webkit-keyframes modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

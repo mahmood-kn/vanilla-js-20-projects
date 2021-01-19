@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(23.8%, #f7f7f7), color-stop(92%, #fcdddd));
+  background: linear-gradient(0deg, #f7f7f7 23.8%, #fcdddd 92%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  margin-bottom: 6rem;
+}
+
+.music-container {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  height: 100px;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+          box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+}
+
+.music-container .img-container {
+  position: relative;
+  width: 110px;
+  z-index: 10;
+  height: 110px;
+}
+
+.music-container .img-container img {
+  position: absolute;
+  border-radius: 50%;
+  height: 110px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: inherit;
+  bottom: 20%;
+  left: 0;
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.music-container .img-container::after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  bottom: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  z-index: 100;
+}
+
+.music-container .music-info {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 10px 10px 150px;
+  border-radius: 10px 10px 0 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 0;
+  width: calc(100% - 40px);
+  z-index: 1;
+  -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+.music-container .music-info h4 {
+  margin: 0;
+}
+
+.music-container .music-info .progress-container {
+  height: 4px;
+  margin: 1rem 0.5rem 1rem 0;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.music-container .music-info .progress-container .progress {
+  height: inherit;
+  width: 0%;
+  background-color: #fe8daa;
+  border-radius: 2px;
+}
+
+.music-container.play .music-info {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 1;
+}
+
+.music-container.play .img-container img {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.music-container .navigation {
+  z-index: 1000;
+}
+
+.music-container .navigation .action-button {
+  background: none;
+  border: none;
+  color: #dfdbdf;
+  font-size: 1.3rem;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.music-container .navigation .action-button:focus {
+  outline: 0;
+}
+
+.music-container .navigation .action-button-big {
+  font-size: 1.8rem;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

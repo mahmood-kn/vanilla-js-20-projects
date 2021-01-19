@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+$border-color: #e3e5e4;
+$background-color: #c3c7ca;
+$text-color: #34444f;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+}
+
+.draggable-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  border: 1px solid $border-color;
+
+  li {
+    display: flex;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $border-color;
+    }
+    .draggable {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem;
+      background-color: #fff;
+      align-items: center;
+      width: 200px;
+      color: $text-color;
+    }
+    &.over .draggable {
+      background-color: #eaeaea;
+    }
+    .number {
+      background-color: $background-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      color: $text-color;
+      font-size: 1.8rem;
+    }
+  }
+
+  .person-name {
+    margin: 0;
+
+    &.right {
+      color: #3ae374;
+    }
+    &.wrong {
+      color: #ff3838;
+    }
+  }
+}
+
+.check {
+  background-color: $background-color;
+  border: none;
+  cursor: pointer;
+  color: $text-color;
+  padding: 10px 20px;
+  margin: 0.7rem 0;
+  font-size: 1.3rem;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.gameover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

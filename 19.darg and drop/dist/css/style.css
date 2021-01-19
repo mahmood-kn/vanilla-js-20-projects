@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+}
+
+.draggable-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0;
+  border: 1px solid #e3e5e4;
+}
+
+.draggable-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid #e3e5e4;
+}
+
+.draggable-list li .draggable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.8rem;
+  background-color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  color: #34444f;
+}
+
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
+}
+
+.draggable-list li .number {
+  background-color: #c3c7ca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 60px;
+  color: #34444f;
+  font-size: 1.8rem;
+}
+
+.draggable-list .person-name {
+  margin: 0;
+}
+
+.draggable-list .person-name.right {
+  color: #3ae374;
+}
+
+.draggable-list .person-name.wrong {
+  color: #ff3838;
+}
+
+.check {
+  background-color: #c3c7ca;
+  border: none;
+  cursor: pointer;
+  color: #34444f;
+  padding: 10px 20px;
+  margin: 0.7rem 0;
+  font-size: 1.3rem;
+}
+
+.check:focus {
+  outline: 0;
+}
+
+.check:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.gameover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
